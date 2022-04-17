@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body><script>
+        function string_reverse(str) 
+function LetterChanges(text) {
+
+var s = text.split('');
+for (var i = 0; i < s.length; i++) {
+
+switch(s[i]) {
+case ' ':
+break;
+case 'z':
+s[i] = 'a';
+break;
+case 'Z': 
+s[i] = 'A';
+break;
+default:
+s[i] = String.fromCharCode(1 + s[i].charCodeAt(0));
+}
+switch(s[i]) {
+case 'a': case 'e': case 'i': case 'o': case 'u':
+s[i] = s[i].toUpperCase();
+}
+}
+return s.join('');
+}
+console.log(LetterChanges("PYTHON"));
+console.log(LetterChanges("SCRIPT"));
+console.log(LetterChanges("IP"));      
+        
+        </script>
+    </body>
+</html>

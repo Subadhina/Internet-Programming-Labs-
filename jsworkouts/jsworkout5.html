@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body><script>
+        function near_100(x, y) {
+  if (x != y)
+  {
+  x1 = Math.abs(x - 100);
+  y1 = Math.abs(y - 100);
+
+  if (x1 < y1)
+  {
+    return x;
+  }
+  if (y1 < x1)
+  {
+    return y;
+  }
+  return 0;
+  }
+  else
+    return false;
+}
+
+console.log(near_100(90, 89));
+    </script>
+    </body>
+</html>

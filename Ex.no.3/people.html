@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+        const people = [
+    { firstName: 'Sam', lastName: 'Hughes', DOB: '07/07/1978', department: 'Development', salary: '45000' },
+    { firstName: 'Terri', lastName: 'Bishop', DOB: '02/04/1989', department: 'Development', salary: '35000' },
+    { firstName: 'Jar', lastName: 'Burke', DOB: '11/01/1985', department: 'Marketing', salary: '38000' },
+    { firstName: 'Julio', lastName: 'Miller', DOB: '12/07/1991', department: 'Sales', salary: '40000' },
+    { firstName: 'Chester', lastName: 'Flores', DOB: '03/15/1988', department: 'Development', salary: '41000' },
+    { firstName: 'Madison', lastName: 'Marshall', DOB: '09/22/1980', department: 'Sales', salary: '32000' },
+    { firstName: 'Ava', lastName: 'Pena', DOB: '11/02/1986', department: 'Development', salary: '38000' },
+    { firstName: 'Gabriella', lastName: 'Steward', DOB: '08/26/1994', department: 'Marketing', salary: '46000' },
+    { firstName: 'Charles', lastName: 'Campbell', DOB: '09/04/1977', department: 'Sales', salary: '42000' },
+    { firstName: 'Tiffany', lastName: 'Lambert', DOB: '05/11/1990', department: 'Development', salary: '34000' },
+    { firstName: 'Antonio', lastName: 'Gonzalez', DOB: '03/24/1985', department: 'Office Management', salary: '49000' },
+    { firstName: 'Aaron', lastName: 'Garrett', DOB: '09/04/1985', department: 'Development', salary: '39000' },
+    ];
+      var buffer = Number(people[0].salary); for(let i=1; i < people.length; i++){ buffer = buffer + Number(people[i].salary); } document.writeln("average income is "+ Math.round(buffer/people.length));
+      
+      for(let i = 0; i<people.length; i++){ if(2020 - Number(people[i].DOB.slice(6,10)) >= 30){ document.writeln(people[i].lastName + " "+ people[i].firstName); } }
+        
+    for(let i=0; i<people.length; i++){ 
+        console.log(people[i].firstName + " "+people[i].lastName); }
+        var youngest = people[0]; var oldest = people[0]; people.forEach(function(person) { if (youngest.DOB < person.DOB) { youngest = person; } if (person.DOB < oldest.DOB) { oldest = person; } }); console.log(youngest, oldest);
+        
+        const departments= {};
+people.forEach(person => 
+    !departments[person.department] ?  departments[person.department] = 1 
+    : departments[person.department] += 1);
+
+console.table(departments);
+
+
+
+        </script>
+    </body>
+</html>
