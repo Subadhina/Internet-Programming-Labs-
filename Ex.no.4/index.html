@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <script>
+       
+ 
+ function SelectedTextValue(ele) {
+            if (ele.selectedIndex > 0) {
+                var selectedText = ele.options[ele.selectedIndex].innerHTML;
+                var selectedValue = ele.value;
+                document.getElementById("txtContent").value = selectedText;
+            }
+            else {
+                document.getElementById("txtContent").value = "Error";
+                
+            }
+        }
+        function validate() {
+  
+            var user = document.getElementById("tele").value;
+            var user2 = document.getElementById("tele");
+            var re = /^[7-9][0-9]{9}$/;
+            if (re.test(user)) {
+                alert("done");
+                return true;
+            }
+            else {
+  
+                user2.style.border = "red solid 3px";
+                return false;
+            }
+            
+        }
+        function Check() {
+        var contact = document.getElementById("contact");
+        if (contact.checked) {
+            alert("CheckBox checked.");
+        } else {
+            alert("CheckBox not checked.");
+        }
+    }
+    
+    </script>
+       
+    </head>
+    <body>
+    
+    <form name="form1">
+        <p> What type of car would u like to buy?</p> 
+          <input type="radio" id="pro" name="fav_language" value="PROTON">
+<label for="pro">Proton</label> <input type="radio" id="hon" name="fav_language" value="HONDA"><label for="hon">Honda</label>
+<input type="radio" id="fer" name="fav_language" value="FERRI"><label for="fer">Ferri</label><input type="radio" id="For" name="fav_language" value="FORD"><label for="FORD">Ford</label>
+<p>What color do u want on your car?</p>
+    
+  <select name="cars" id="cars" onchange="SelectedTextValue(this)">
+    <option value="pink">Pink</option>
+    <option value="cyan">Cyan</option>
+    <option value="black">Black</option>
+    <option value="white">White</option>
+  </select>
+ <label for="other">Other:</label>
+ <input name="txtContent" type="text" id="txtContent" /><br><br><br>
+ <label for="review">Enter other specification for your preferred car:</label><br>
+ <textarea maxlength="20" minlength="10">
+</textarea>
+<p>Tell us how to get in touch with you: </p>
+<pre> <label for="name">       Name:     </label> <input type="text" id="name" name="name"><br><br>
+<label for="tele">        Telephone:</label> <input type="text" id="tele" name="tele"> <br><br>
+<label for="email">        Email:    </label> <input type="text" id="email" name="email"><br><br></pre>
+  <input type="checkbox" id="contact" name="contact" value="con" onclick = "Check()">
+  <label for="contact"> Please contact me as soon as possible.</label><br>
+  <p>My Mail:</p><pre><a href = "mailto: abc@example.com">abc@example.com</a></pre>
+  <pre>    <input type="submit"  value="Submit" onclick="validate()">    <input type="reset" value="Reset"/></pre>
+  <a href = "mailto: abc@example.com">Back to mail page</a>
+    </form>
+    </body>
+</html>
