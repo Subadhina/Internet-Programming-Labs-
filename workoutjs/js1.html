@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+       
+         <form>
+        <h2>Passenger Details:</h2>
+        Valid Age: <p id="demo"></p>
+        Valid mail id:      <p id="demo1"></p>
+        Valid Gender:       <p id="demo2"></p>
+        <pre>
+             Name:    <input type="text">
+             Age:     <input type="text" id="a">
+             Email id:<input type="text" id="e">
+             Gender:  <input type="text" id="g">
+        </pre>
+        <button type="button" onclick="validate()">Enter</button>
+        </form>
+        <script>
+        function validate()
+      {
+         let text=document.getElementById("a").value;
+         let pattern=/^[1-9]?[0-9]{1}$|^100$/;
+         document.getElementById("demo").innerHTML=pattern.test(text);
+         
+         let text1=document.getElementById("e").value;
+         let pattern1=/[a-z]+\@[a-z]+\.[a-z]{2,3}/;
+         document.getElementById("demo1").innerHTML=pattern1.test(text1);
+         
+         let text2=document.getElementById("g").value;
+         let pattern2=/(fe)?male$/i;
+         document.getElementById("demo2").innerHTML=pattern2.test(text2);
+     }
+        </script>   
+    </body>
+</html>
